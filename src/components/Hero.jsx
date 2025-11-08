@@ -7,7 +7,7 @@ function Hero() {
   const stats = [
     { value: '64.5%', label: 'Historical Accuracy' },
     { value: '24/7', label: 'Signal Delivery' },
-    { value: '$0', label: 'Monthly Cost' },
+    { value: 'Free', label: 'Monthly Cost' },
   ];
 
   useEffect(() => {
@@ -45,7 +45,7 @@ function Hero() {
           Stop guessing. Use our proven{' '}
           <span className="text-indigo-400 font-medium">XGBoost model</span> to receive
           high-confidence BUY/SELL signals at the right time, 24/7. Join{' '}
-          <span className="text-purple-300 font-medium">100+ traders</span> already profiting.
+          <span className="text-purple-300 font-medium">FREE</span> if you already profiting.
         </p>
 
         {/* CTA Button */}

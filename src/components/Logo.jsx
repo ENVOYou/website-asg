@@ -5,7 +5,7 @@ function Logo({ variant = 'default', className = "w-8 h-8" }) {
 
   // Logo variants mapping
   const logoVariants = {
-    default: '/logo.svg',
+    default: '/logo-main.svg',
     black: '/asg-black.svg',
     white: '/asg-white.svg'
   };

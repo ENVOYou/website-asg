@@ -32,7 +32,7 @@ function FAQ() {
     },
     {
       question: "Can I cancel anytime?",
-      answer: "Yes, you can cancel your subscription at any time. You'll continue to receive signals until the end of your billing period. We offer a 30-day money-back guarantee."
+      answer: "Yes, you can cancel with leave Group at any time."
     },
     {
       question: "Do you provide customer support?",

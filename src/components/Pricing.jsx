@@ -9,7 +9,7 @@ function Pricing() {
     // Simulate API call
     setTimeout(() => {
       // Replace with actual Paddle/Stripe integration
-      window.open('https://buy.paddle.com/test/xxx', '_blank');
+      window.open('https://t.me/+J9Ueg0G7QiwzNmY1', '_blank');
       setIsLoading(false);
     }, 1000);
   };
@@ -30,23 +30,22 @@ function Pricing() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
           <p className="text-xl text-gray-400">
-            One price for everything. No hidden fees.
+            One action for everything. No hidden fees.
           </p>
         </div>
 
         <div className="max-w-md mx-auto">
           <div className="bg-linear-to-br from-gray-900 to-gray-800 p-8 rounded-2xl border border-gray-700 shadow-2xl">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold mb-2">VIP Access Plan</h3>
+              <h3 className="text-2xl font-bold mb-2">Member Access</h3>
               <p className="text-gray-400">Everything you need to profit</p>
             </div>
 
             <div className="text-center mb-8">
               <div className="flex items-center justify-center mb-4">
-                <span className="text-6xl font-bold text-indigo-400">$5</span>
-                <span className="text-gray-400 ml-2">/ month</span>
+                <span className="text-6xl font-bold text-indigo-400">FREE</span>
               </div>
-              <p className="text-sm text-gray-500">Billed monthly • Cancel anytime</p>
+              <p className="text-sm text-gray-500">Promo time • Cancel anytime</p>
             </div>
 
             <ul className="space-y-4 mb-10">
@@ -78,7 +77,7 @@ function Pricing() {
             </button>
 
             <p className="text-xs text-gray-500 text-center mt-4">
-              30-day money-back guarantee • No setup fees
+              Limited promotion • Only for the first 100 members
             </p>
           </div>
         </div>

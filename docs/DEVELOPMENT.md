@@ -48,7 +48,7 @@ website-asg/
 >  
 > Output Channels: `Telegram`, `Email`
 
-```
+```mermaid
 graph TB
 
     %% ===========================

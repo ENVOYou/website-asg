@@ -48,37 +48,58 @@ website-asg/
 >  
 > Output Channels: `Telegram`, `Email`
 
-    ┌──────────────────────────┐
-   │     CoinGecko API        │
-   │  Daily OHLC → Features   │
-   └──────────────┬───────────┘
-                 ░│
-                 ░│
-     ┌────────────────────────┐
-     │     Binance REST       │
-     │   1m/5m/15m Candles    │
-     └────────────┬───────────┘
-                  ░│
-                  ░│
-         ┌──────────────────────┐
-         │   Binance WebSocket  │
-         │ Order Book + Depth   │
-         └───────────┬──────────┘
-                     ▼
-            ╔═══════════════════╗
-            ║   XGBoost v0.3    ║
-            ╚═══════════════════╝
-                     ▼
-         ┌────────────────────────┐
-         │     Risk Protection     │
-         │ Volatility + Confidence │
-         └───────────┬────────────┘
-                     ▼
-         ┌────────────────────────┐
-         │ Telegram + Email Output│
-         └────────────────────────┘
+```
+graph TB
 
+    %% ===========================
+    %% DATA SOURCES
+    %% ===========================
+    subgraph "Market Data Sources"
+        CG[CoinGecko API\nDaily OHLC Data]
+        BR[Binance REST API\n1m/5m/15m Candles]
+        BW[Binance WebSocket\nOrder Book Depth]
+    end
 
+    %% ===========================
+    %% FEATURE ENGINEERING
+    %% ===========================
+    subgraph "Feature Processing"
+        FS[Feature Store\n(OHLC + Microstructure)]
+        FX[Feature Extraction]
+    end
+
+    %% ===========================
+    %% MODEL ENGINE
+    %% ===========================
+    subgraph "AI Model Engine"
+        MODEL[XGBoost Model v0.3\nTrend & Confidence Score]
+    end
+
+    %% ===========================
+    %% RISK LAYER
+    %% ===========================
+    subgraph "Risk Protection Layer"
+        RP[Volatility Guard\nConfidence Filter ≥ 65%\nExtreme Market Safety]
+    end
+
+    %% ===========================
+    %% OUTPUT DELIVERY
+    %% ===========================
+    subgraph "Signal Delivery"
+        TEL[Telegram Notification\nEvery 6 Hours]
+        EMAIL[Email HTML Report\nWith Indicators]
+    end
+
+    %% FLOW CONNECTIONS
+    CG --> FS
+    BR --> FX
+    BW --> FX
+    FS --> MODEL
+    FX --> MODEL
+    MODEL --> RP
+    RP --> TEL
+    RP --> EMAIL
+```
 
 ## 🚀 Getting Started
 

@@ -20,7 +20,6 @@ AI Signal Generator
 ![Vite](https://img.shields.io/badge/Vite-7.1.7%2B-red)
 [![Website](https://img.shields.io/badge/Website-asg.envoyou.com-blue)](https://asg.envoyou.com)
 ![License](https://img.shields.io/badge/License-MIT-blue)
-
 </div>
 
 :star: _Get professional Bitcoin trading signals with 93.1% directional accuracy, powered by Binance API integration and advanced market microstructure analysis. Signals delivered to your phone and email every 6 hours._

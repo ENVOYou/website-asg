@@ -51,46 +51,33 @@ website-asg/
 ```mermaid
 graph TB
 
-    %% ===========================
-    %% DATA SOURCES
-    %% ===========================
+    %% Define reusable block style
+    classDef block fill:#1f2937,stroke:#4b5563,color:#f9fafb,stroke-width:2px,rx:8px,ry:8px;
+
     subgraph "Market Data Sources"
-        CG[CoinGecko API\nDaily OHLC Data]
-        BR[Binance REST API\n1m/5m/15m Candles]
-        BW[Binance WebSocket\nOrder Book Depth]
+        CG[CoinGecko API <br/> Daily OHLC Data]:::block
+        BR[Binance REST API <br/> 1m / 5m / 15m Candles]:::block
+        BW[Binance WebSocket <br/> Order Book Depth]:::block
     end
 
-    %% ===========================
-    %% FEATURE ENGINEERING
-    %% ===========================
     subgraph "Feature Processing"
-        FS[Feature Store\n(OHLC + Microstructure)]
-        FX[Feature Extraction]
+        FS[Feature Store <br/> OHLC + Microstructure]:::block
+        FX[Feature Extraction]:::block
     end
 
-    %% ===========================
-    %% MODEL ENGINE
-    %% ===========================
     subgraph "AI Model Engine"
-        MODEL[XGBoost Model v0.3\nTrend & Confidence Score]
+        MODEL[XGBoost Model v0.3 <br/> Trend + Confidence Score]:::block
     end
 
-    %% ===========================
-    %% RISK LAYER
-    %% ===========================
     subgraph "Risk Protection Layer"
-        RP[Volatility Guard\nConfidence Filter ≥ 65%\nExtreme Market Safety]
+        RP[Volatility Guard <br/> Safety Filter]:::block
     end
 
-    %% ===========================
-    %% OUTPUT DELIVERY
-    %% ===========================
     subgraph "Signal Delivery"
-        TEL[Telegram Notification\nEvery 6 Hours]
-        EMAIL[Email HTML Report\nWith Indicators]
+        TEL[Telegram Notifications]:::block
+        EMAIL[Email HTML Report]:::block
     end
 
-    %% FLOW CONNECTIONS
     CG --> FS
     BR --> FX
     BW --> FX
